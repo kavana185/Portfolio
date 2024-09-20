@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #2c2c2c;
+}
+
+nav {
+    background-color: #1c1c1c;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    z-index: 1000;
+    font-family: 'Lucida Console', Monospace, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align:center;
+}
+
+#welcome-section {
+    height: 60vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom:0px;
+
+}
+
+.greeting {
+    font-family: 'Papyrus',Fantasy, sans-serif; 
+    font-weight:bold; 
+    font-size:50px;
+    margin:0;
+}
+.greeting1 {
+    font-family: 'Papyrus',Fantasy, sans-serif; 
+    font-weight:bold; 
+    font-size:30px;
+    margin:0;
+}
+
+#projects {
+    padding: 40px 20px;
+    background-color: #333;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 35px; 
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-tile {
+    flex: 0 0 45%; 
+    max-width: 300px; 
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-tile img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-tile a {
+    color: white; 
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.project-tile a:hover{
+    color:#9b59b6;
+}
+
+#about {
+    padding: 40px 20px;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #1c1c1c;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lucida Console', Monospace, sans-serif;
+}
+
+footer a:hover {
+    color: #9b59b6;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .project-tile {
+        flex: 0 0 90%; 
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+h2{
+    text-align:center;
+}
