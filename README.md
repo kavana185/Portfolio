@@ -31,7 +31,7 @@ Built with **HTML, CSS, and JavaScript**, it is fully responsive and designed to
 ---
 
 ## 📬 Contact
-- **Email:** [kavanama185@example.com]  
+- **Email:** [kavanama185@gmail.com]  
 - **GitHub:** [@kavana185](https://github.com/kavana185)  
 - **LinkedIn:** [Kavana M A](https://linkedin.com/in/kavana-ma)  
 
