@@ -79,3 +79,19 @@ function animate(){
 }
 animate();
 
+const menuToggle = document.querySelector(".menu-toggle");
+const navUl = document.querySelector("nav ul");
+
+// Toggle menu when clicking hamburger
+menuToggle.addEventListener("click", () => {
+  navUl.classList.toggle("active");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (!navUl.contains(e.target) && !menuToggle.contains(e.target)) {
+    navUl.classList.remove("active");
+  }
+});
+
+
