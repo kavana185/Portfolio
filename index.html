@@ -45,7 +45,25 @@
   </div>
 </div>
 
+<div class="skill-category">
+  <h3>Machine Learning</h3>
+  <div class="badges">
+    <span>TensorFlow/Keras</span>
+    <span>Scikit-learn</span>
+    <span>Pandas</span>
+    <span>CNN-LSTM</span>
+  </div>
+</div>
 
+<div class="skill-category">
+  <h3>Cloud & DevOps</h3>
+  <div class="badges">
+    <span>AWS EC2</span>
+    <span>AWS ECR</span>
+    <span>Docker</span>
+    <span>MongoDB</span>
+  </div>
+</div>
     <div class="skill-category">
       <h3>Web Development</h3>
       <div class="badges">
@@ -57,7 +75,7 @@
     <div class="skill-category">
       <h3>Tools & Platforms</h3>
       <div class="badges">
-        <span>Git</span><span>GitHub</span><span>VS Code</span>
+        <span>Git</span><span>GitHub</span><span>VS Code</span><span>Streamlit</span><span>Figma</span>
       </div>
     </div>
 
@@ -70,161 +88,252 @@
 
   </div>
 </section>
-
-
-  <!-- Projects -->
 <section id="projects">
-  <h2>Projects</h2>
+  <!-- Filter Buttons -->
+<div class="filter-buttons" style="padding: 40px 20px;">
+  <button class="filter-btn active" data-category="featured">Featured</button>
+  <button class="filter-btn" data-category="all">All</button>
+  <button class="filter-btn" data-category="ml">Machine Learning</button>
+  <button class="filter-btn" data-category="cloud">Cloud</button>
+  <button class="filter-btn" data-category="data">Data Analytics</button>
+  <button class="filter-btn" data-category="security">Security</button>
+  <button class="filter-btn" data-category="fullstack">Full Stack</button>
+  <button class="filter-btn" data-category="networking">Networking</button>
+  <button class="filter-btn" data-category="research">Research</button>
+  <button class="filter-btn" data-category="uiux">UI/UX</button>
+  <button class="filter-btn" data-category="mini">Mini Projects</button>
+</div>
 
-  <!-- Featured Project -->
-  <!-- <div class="featured-project">
-    <div class="featured-image">
-      <img src="https://i.postimg.cc/DzH1RqPq/Screenshot-2024-09-20-194825.png" alt="Rocket Telemetry Dashboard">
-    </div>
-    <div class="featured-content">
-      <h3>🚀 Rocket Telemetry Dashboard</h3>
+<!-- Project Grid -->
+<div class="projects-grid">
+
+  <!-- Featured + ML + Cloud -->
+  <div class="card" data-category="featured data cloud">
+    <div class="card-body">
+      <h3>Cloud-Based AQI Analytics Dashboard</h3>
       <p>
-        Real-time telemetry dashboard with interactive 3D trajectory visualization (Three.js), 
-        live playback controls, and Chart.js graphs for velocity, altitude, and sensor data.
+        Cloud-native dashboard for AQI analytics, pollution monitoring,
+        and environmental insights using Docker, AWS EC2/ECR, MongoDB, and Python.
       </p>
+      <a href="https://github.com/kavana185/Cloud-Based-Air-Quality-Analytics-Dashboard" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="featured ml">
+    <div class="card-body">
+      <h3>Urban Air Quality Forecasting System</h3>
+      <p>
+        CNN-LSTM based PM2.5 forecasting system using pollution and weather datasets
+        with multi-step AQI prediction and Streamlit visualization.
+      </p>
+      <a href="https://github.com/kavana185/Urban-Air-Quality-Forecasting-and-Health-Advisory-System" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="featured data">
+  <div class="card-body">
+    <h3>Air Quality Analytics Dashboard Using Spark</h3>
+    <p>
+      Big data analytics dashboard for air quality monitoring using Apache Spark
+      with scalable processing and visualization pipelines.
+    </p>
+    <a href="https://github.com/kavana185/Air-Quality-Analytics-Dashboard-Using-Spark" target="_blank" class="btn">GitHub</a>
+  </div>
+</div>
+
+  <div class="card" data-category="featured security ml">
+    <div class="card-body">
+      <h3>Fake Social Media Account Detection</h3>
+      <p>
+        Machine learning + blockchain based fake account detection system
+        with tamper-proof identity verification.
+      </p>
+      <a href="https://github.com/kavana185/Fake-social-media-detection" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+  <div class="card" data-category="featured fullstack">
+    <div class="card-body">
+      <h3>AI Memory Coach</h3>
+      <p>
+        AI-powered productivity and memory assistant designed to help users
+        organize tasks, reminders, and learning workflows intelligently.
+      </p>
+      <a href="https://github.com/kavana185/AI-memory-coach" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="data">
+    <div class="card-body">
+      <h3>IMDb Data Visualization</h3>
+      <p>
+        Exploratory data analysis and visualization project on IMDb datasets
+        using Python libraries for trend analysis and insights.
+      </p>
+      <a href="https://github.com/kavana185/IMDB_data_visualization" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+  <div class="card" data-category="featured research security">
+    <div class="card-body">
+      <h3>Encrypted Vector Search Research</h3>
+      <p>
+        Research project focused on privacy-preserving indexing and
+        vector similarity search using Homomorphic Encryption.
+      </p>
+    </div>
+  </div>
+
+  <!-- Full Stack -->
+  <div class="card" data-category="fullstack">
+    <img src="https://i.postimg.cc/pX4Zv06q/Screenshot-2025-08-25-232321.png" alt="Skill Swap">
+    <div class="card-body">
+      <h3>Skill Swap</h3>
+      <p>
+        Full stack collaboration platform for skill exchange and peer learning.
+      </p>
+      <a href="https://kavana185.github.io/skillswap/login.html" target="_blank">View</a>
+      <a href="https://github.com/kavana185/skillswap" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Networking -->
+  <div class="card" data-category="networking">
+    <img src="https://raw.githubusercontent.com/kavana185/network-packet-sniffer/main/demo.png" alt="Packet Sniffer">
+    <div class="card-body">
+      <h3>Packet Sniffer</h3>
+      <p>
+        Network packet analyzer displaying IPs, ports, and TCP/UDP protocols.
+      </p>
+      <a href="https://github.com/kavana185/network-packet-sniffer" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="networking">
+    <img src="https://i.postimg.cc/qq0CBT81/demo.png" alt="Port Scanner">
+    <div class="card-body">
+      <h3>Port Scanner</h3>
+      <p>
+        Multi-threaded scanner for identifying open ports across target hosts.
+      </p>
+      <a href="https://github.com/kavana185/port-scanner" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="networking">
+    <img src="https://i.postimg.cc/7YSWsxdV/Screenshot-2025-08-26-003900.png" alt="Chat application">
+    <div class="card-body">
+      <h3>Chat Application</h3>
+      <p>
+        Socket-based real-time communication application built using networking concepts.
+      </p>
+      <a href="https://github.com/kavana185/chat-application" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Rocketry -->
+  <div class="card" data-category="featured fullstack">
+    <img src="https://i.postimg.cc/9Q8J8Jgj/dashboard.png" alt="Rocket Trajectory">
+    <div class="card-body">
+      <h3>Rocket Trajectory Visualizer</h3>
+      <p>
+        Interactive 3D rocket telemetry and trajectory visualization using Three.js.
+      </p>
+      <a href="https://drive.google.com/file/d/1TIZXsy3mEKiP_rJYBeG4bnyFsPDRTaQx/view?usp=sharing" target="_blank">View</a>
       <a href="https://github.com/kavana185/Rocket-Telemetry-Dashboard" target="_blank" class="btn">GitHub</a>
     </div>
-  </div> -->
-
-  <!-- Filter Buttons -->
-  <div class="filter-buttons"style="padding: 40px 20px;">
-    <button class="filter-btn active" data-category="all">All</button>
-    <button class="filter-btn" data-category="htmlcss">HTML + CSS</button>
-    <button class="filter-btn" data-category="fullstack">Full Stack</button>
-    <button class="filter-btn" data-category="networking">Networking</button>
-    <button class="filter-btn" data-category="rocket">Rocketry</button>
-    <button class="filter-btn" data-category="uiux">UI/UX</button>
-    <button class="filter-btn" data-category="crypto">Cryptography</button>
   </div>
 
-  <!-- Project Grid -->
+  <!-- UI/UX -->
+  <div class="card" data-category="uiux fullstack">
+    <img src="https://i.postimg.cc/t4s6Ry1z/Screenshot-2025-08-26-010212.png" alt="QuickCare">
+    <div class="card-body">
+      <h3>QuickCare</h3>
+      <p>
+        Healthcare application frontend with responsive UI/UX workflows designed in Figma.
+      </p>
+      <a href="https://github.com/kavana185/QuickCare" target="_blank" class="btn">GitHub</a>
+      <a href="https://www.figma.com/design/QQoLlVXC7m8GdI6UILblJs/QuickCare?node-id=0-1&p=f" target="_blank" class="btn">Figma</a>
+    </div>
+  </div>
+
+  <!-- Security -->
+  <div class="card" data-category="security">
+    <img src="https://i.postimg.cc/W4zsBL5f/Screenshot-2025-08-26-005502.png" alt="Maskify">
+    <div class="card-body">
+      <h3>Maskify Extension</h3>
+      <p>
+        Browser extension for masking and protecting sensitive information online.
+      </p>
+      <a href="https://github.com/kavana185/maskify/releases" target="_blank">Download</a>
+      <a href="https://github.com/kavana185/maskify" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Mini Projects -->
+  <div class="card" data-category="mini">
+    <img src="https://i.postimg.cc/K8bqHy8Z/Screenshot-2024-09-20-194425.png" alt="Survey Form">
+    <div class="card-body">
+      <h3>Survey Form</h3>
+      <p>Responsive frontend interface built using HTML and CSS.</p>
+      <a href="https://codepen.io/Kavana-M-A/full/MWNgyaY" target="_blank">View</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="mini">
+    <img src="https://i.postimg.cc/yYHyVy4j/Screenshot-2024-09-20-194653.png" alt="Tribute Page">
+    <div class="card-body">
+      <h3>Tribute Page</h3>
+      <p>Responsive tribute webpage developed with semantic HTML and CSS.</p>
+      <a href="https://codepen.io/Kavana-M-A/full/MWNgyyY" target="_blank">View</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="mini">
+    <img src="https://i.postimg.cc/nr8Y9vsH/Screenshot-2024-09-20-194512.png" alt="Technical Documentation">
+    <div class="card-body">
+      <h3>Technical Documentation</h3>
+      <p>Structured documentation webpage with responsive navigation layout.</p>
+      <a href="https://codepen.io/Kavana-M-A/full/vYoBGGR" target="_blank">View</a>
+    </div>
+  </div>
+
+  <div class="card" data-category="mini">
+    <img src="https://i.postimg.cc/DzH1RqPq/Screenshot-2024-09-20-194825.png" alt="Landing Page">
+    <div class="card-body">
+      <h3>Product Landing Page</h3>
+      <p>Modern landing page UI developed using HTML and CSS.</p>
+      <a href="https://codepen.io/Kavana-M-A/full/zYgOqBK" target="_blank">View</a>
+    </div>
+  </div>
+
+</div>
+</section>
+<section id="research">
+  <h2>Research & Ongoing Work</h2>
+
   <div class="projects-grid">
-    <!-- HTML + CSS -->
-     <!-- 1 -->
-    <div class="card" data-category="htmlcss">
-      <img src="https://i.postimg.cc/K8bqHy8Z/Screenshot-2024-09-20-194425.png" alt="Survey Form">
+
+    <div class="card">
       <div class="card-body">
-        <h3>Survey Form</h3>
-        <p>Basic HTML + CSS project</p>
-        <a href="https://codepen.io/Kavana-M-A/full/MWNgyaY" target="_blank">View</a>
-      </div>
-      <!-- 2 -->
-    </div>
-    <div class="card" data-category="htmlcss">
-      <img src="https://i.postimg.cc/yYHyVy4j/Screenshot-2024-09-20-194653.png" alt="Survey Form">
-      <div class="card-body">
-        <h3>Tribute page</h3>
-        <p>Basic HTML + CSS project</p>
-        <a href="https://codepen.io/Kavana-M-A/full/MWNgyyY" target="_blank">View</a>
-      </div>
-      <!-- 3 -->
-    </div>
-    <div class="card" data-category="htmlcss">
-      <img src="https://i.postimg.cc/nr8Y9vsH/Screenshot-2024-09-20-194512.png" alt="Survey Form">
-      <div class="card-body">
-        <h3>Technical documentation</h3>
-        <p>Basic HTML + CSS project</p>
-        <a href="https://codepen.io/Kavana-M-A/full/vYoBGGR" target="_blank">View</a>
-      </div>
-      <!-- 4 -->
-    </div>
-    <div class="card" data-category="htmlcss">
-      <img src="https://i.postimg.cc/DzH1RqPq/Screenshot-2024-09-20-194825.png" alt="Survey Form">
-      <div class="card-body">
-        <h3>Product landing page</h3>
-        <p>Basic HTML + CSS project</p>
-        <a href="https://codepen.io/Kavana-M-A/full/zYgOqBK" target="_blank">View</a>
+        <h3>Homomorphic Encryption Search</h3>
+        <p>
+          Exploring encrypted indexing and secure vector database operations
+          for privacy-preserving search systems.
+        </p>
       </div>
     </div>
 
-    <!-- Full Stack -->
-    <div class="card" data-category="fullstack">
-      <img src="https://i.postimg.cc/pX4Zv06q/Screenshot-2025-08-25-232321.png" alt="Skill Swap">
+    <div class="card">
       <div class="card-body">
-        <h3>Skill Swap</h3>
-        <p>Full stack app built with HTML, CSS, JS</p>
-        <a href="https://kavana185.github.io/skillswap/login.html">View</a>
-        <a href="https://github.com/kavana185/Rocket-Telemetry-Dashboard" target="_blank" class="btn">GitHub</a>
+        <h3>Stress & Cognitive Workload Assessment</h3>
+        <p>
+          Deep learning-based multimodal classification using EEG and fNIRS
+          signals with CNN-LSTM architectures.
+        </p>
       </div>
     </div>
 
-    <!-- Networking -->
-    <div class="card" data-category="networking">
-      <img src="https://raw.githubusercontent.com/kavana185/network-packet-sniffer/main/demo.png" alt="Packet Sniffer">
-      <div class="card-body">
-        <h3>Packet Sniffer</h3>
-        <p>Displays IP ,ports, and protocols (TCP/UDP)</p>
-        <a href="https://github.com/kavana185/network-packet-sniffer" target="_blank" class="btn">GitHub</a>
-      </div>
-    </div>
-    <div class="card" data-category="networking">
-      <img src="https://i.postimg.cc/qq0CBT81/demo.png" alt="Port Scanner">
-      <div class="card-body">
-        <h3>Port Scanner</h3>
-        <p>Scans a given host for open ports in a specified range.</p>
-        <a href="https://github.com/kavana185/port-scanner" target="_blank" class="btn">GitHub</a>
-      </div>
-    </div>
-    <div class="card" data-category="networking">
-      <img src="https://i.postimg.cc/7YSWsxdV/Screenshot-2025-08-26-003900.png" alt="Chat application">
-      <div class="card-body">
-        <h3>Simple chat application</h3>
-        <p>Networking-related project</p>
-        <a href="https://github.com/kavana185/chat-application" target="_blank" class="btn">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Rocket -->
-    <div class="card" data-category="rocket">
-      <img src="https://i.postimg.cc/9Q8J8Jgj/dashboard.png" alt="Rocket Trajectory">
-      <div class="card-body">
-        <h3>Rocket Trajectory Visualizer</h3>
-        <p>3D rocket trajectory project with JS/Three.js</p>
-        <a href="https://drive.google.com/file/d/1TIZXsy3mEKiP_rJYBeG4bnyFsPDRTaQx/view?usp=sharing" target="_blank">View</a>
-        <a href="https://github.com/kavana185/Rocket-Telemetry-Dashboard" target="_blank" class="btn">GitHub</a>
-      </div>
-    </div>
-
-    <!-- MERN
-    <div class="card" data-category="mern">
-      <img src="https://via.placeholder.com/400x250" alt="Expense Tracker">
-      <div class="card-body">
-        <h3>Expense Tracker</h3>
-        <p>Basic MERN app to track expenses</p>
-        <a href="your-demo-link" target="_blank">View</a>
-        <a href="https://github.com/kavana185/Expense-Tracker" target="_blank" class="btn">GitHub</a>
-      </div>
-    </div> -->
-
-    <!-- UI/UX -->
-    <div class="card" data-category="uiux">
-      <img src="https://i.postimg.cc/t4s6Ry1z/Screenshot-2025-08-26-010212.png" alt="QuickCare">
-      <div class="card-body">
-        <h3>QuickCare</h3>
-        <p>Healthcare app frontend & UI/UX design</p>
-        <a href="https://github.com/kavana185/QuickCare" target="_blank" class="btn">Git Hub</a>
-        <a href="https://www.figma.com/design/QQoLlVXC7m8GdI6UILblJs/QuickCare?node-id=0-1&p=f" target="_blank" class="btn">Figma</a>
-      </div>
-    </div>
-
-    <!-- Crypto -->
-    <div class="card" data-category="crypto">
-      <img src="https://i.postimg.cc/W4zsBL5f/Screenshot-2025-08-26-005502.png" alt="Cryptography Extension">
-      <div class="card-body">
-        <h3>Maskify : Extension</h3>
-        <p>Browser extension to hide sensitive data</p>
-        <a href="https://github.com/kavana185/maskify/releases" target="_blank">Download extension</a>
-        <a href="https://github.com/kavana185/maskify" target="_blank" class="btn">Git Hub</a>
-      </div>
-    </div>
   </div>
 </section>
-
 
   <!-- About Section -->
 <section id="about">
@@ -248,7 +357,7 @@
     <section id="education">
   <div class="edu-item">
     <h3>B.E in Computer Science & Engineering</h3>
-    <p>B.M.S College of Engineering | 2023 – 2027 | <strong>GPA: 9.0</strong></p>
+    <p>B.M.S College of Engineering | 2023 – 2027 | <strong>GPA: 9.029</strong></p>
   </div>
 
   <div class="edu-item">
@@ -270,7 +379,10 @@
     <div class="about-right">
   <p>
     Hi! I'm <strong>Kavana</strong>, a 3rd-year CSE student at B.M.S College of Engineering.  
-    I’m passionate about software development, problem-solving, and blending creativity with technology through projects in web development, and networking.
+    I’m passionate about building scalable and data-driven applications using
+    Machine Learning, Cloud Computing, and Software Engineering principles.
+    I enjoy solving real-world problems through intelligent systems,
+    analytics, and modern development tools. 
   </p>
 
   <h4>Achievements 🏆</h4>
@@ -289,7 +401,7 @@
 
   <!-- Resume Download -->
   <div class="resume-btn">
-        <a href="https://drive.google.com/file/d/1sf_uFuxt79QRYPOt1xtpH_kMDfZvXaPb/view?usp=sharing" target="_blank">
+        <a href="https://drive.google.com/file/d/1QmNOc7xbC0-6PVfWl-C7Qkpswp_HaO3j/view?usp=sharing" target="_blank">
             <i class="fas fa-file-alt"></i> View Resume
         </a>
     </div>
@@ -298,7 +410,6 @@
 
   </div>
 </section>
-
 
   <!-- Contact Section -->
 <section id="contact">
