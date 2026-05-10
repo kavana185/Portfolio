@@ -690,3 +690,15 @@ html {
   }
 
 }
+
+/* Fix Research Cards */
+
+#research .card {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#research .projects-grid {
+  align-items: stretch;
+}
