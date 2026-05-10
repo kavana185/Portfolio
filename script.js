@@ -13,7 +13,15 @@ typeEffect();
 
 const filterBtns = document.querySelectorAll('.filter-btn');
 const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+  const categories = card.dataset.category
+    ? card.dataset.category.split(" ")
+    : [];
 
+  if (!categories.includes("featured")) {
+    card.style.display = "none";
+  }
+});
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     // remove active from all
