@@ -653,3 +653,40 @@ html {
   position: relative;
   z-index: 2;
 }
+/* Mobile Fix - Research Cards */
+
+#research .projects-grid {
+  align-items: stretch;
+}
+
+#research .card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  #research {
+    padding: 60px 15px;
+  }
+
+  #research .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #research .card-body {
+    padding: 18px;
+  }
+
+  #research .card-body h3 {
+    font-size: 1.05rem;
+  }
+
+  #research .card-body p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+}
