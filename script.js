@@ -34,7 +34,6 @@ filterBtns.forEach(btn => {
   });
 });
 
-
 const form = document.querySelector(".contact-form");
 
 form.addEventListener("submit", async (e) => {
@@ -42,77 +41,107 @@ form.addEventListener("submit", async (e) => {
 
   const data = new FormData(form);
 
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: "application/json"
-    }
-  });
+  try {
 
-  if (response.ok) {
-    alert("Message sent successfully!");
-    form.reset();
-  } else {
-    alert("Something went wrong.");
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send message.");
+    }
+
+  } catch (error) {
+
+    console.error("Form Error:", error);
+    alert("Error sending message.");
+
   }
 });
 
 
+/* Particle Background */
+
 const canvas = document.createElement("canvas");
-canvas.classList.add("starfield"); 
+canvas.classList.add("starfield");
+
 document.querySelector(".hero").appendChild(canvas);
+
 const ctx = canvas.getContext("2d");
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
+
 resizeCanvas();
+
 window.addEventListener("resize", resizeCanvas);
 
 let particles = Array(120).fill().map(() => ({
-  x: Math.random()*canvas.width,
-  y: Math.random()*canvas.height,
-  radius: Math.random()*2,
-  dx: (Math.random()-0.5)*0.6,
-  dy: (Math.random()-0.5)*0.6
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  radius: Math.random() * 2,
+  dx: (Math.random() - 0.5) * 0.6,
+  dy: (Math.random() - 0.5) * 0.6
 }));
 
-function animate(){
-  ctx.fillStyle = "rgba(0,0,0,0.25)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+function animate() {
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach(p => {
+
     ctx.beginPath();
-    ctx.arc(p.x, p.y, p.radius, 0, Math.PI*2);
+
+    ctx.arc(
+      p.x,
+      p.y,
+      p.radius,
+      0,
+      Math.PI * 2
+    );
+
     ctx.fillStyle = "#9b59b6";
     ctx.fill();
 
     p.x += p.dx;
     p.y += p.dy;
 
-    if(p.x<0||p.x>canvas.width) p.dx*=-1;
-    if(p.y<0||p.y>canvas.height) p.dy*=-1;
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
   });
 
   requestAnimationFrame(animate);
 }
+
 animate();
+
+
+/* Mobile Menu */
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navUl = document.querySelector("nav ul");
 
-// Toggle menu when clicking hamburger
 menuToggle.addEventListener("click", () => {
   navUl.classList.toggle("active");
 });
 
-// Close menu when clicking outside
 document.addEventListener("click", (e) => {
-  if (!navUl.contains(e.target) && !menuToggle.contains(e.target)) {
+
+  if (
+    !navUl.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
     navUl.classList.remove("active");
   }
+
 });
-
-
