@@ -34,7 +34,7 @@ filterBtns.forEach(btn => {
       const categories = card.dataset.category.split(" ");
 
       if (category === "all" || categories.includes(category)) {
-        card.style.display = "block";
+        card.style.display = "";
       } else {
         card.style.display = "none";
       }
