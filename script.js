@@ -12,7 +12,7 @@ function typeEffect() {
 typeEffect();
 
 const filterBtns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('#projects .card');
 cards.forEach(card => {
   const categories = card.dataset.category
     ? card.dataset.category.split(" ")
